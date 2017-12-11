@@ -16,7 +16,7 @@ public class File_ReadWrite {
         //Scanner scan = null;
         BufferedReader buff = null;
 
-        try(FileReader fr = new FileReader(fileToRead)) {
+        try(FileReader fr = new FileReader(fileToRead+".txt")) {
             /*
             int i;
             while ((i = fr.read()) != -1) {

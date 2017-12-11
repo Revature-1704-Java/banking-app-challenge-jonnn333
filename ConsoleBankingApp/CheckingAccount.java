@@ -11,18 +11,18 @@ public class CheckingAccount extends File_ReadWrite implements AccountInterface 
 
     CheckingAccount (String first, String last, String accId_pin) {
         if (accId_pin.equals("none")) {
-            writeFile(first+last+".txt", "50000", "none");
+            writeFile(first+last, "50000", "none");
         }
         else {
-            readFile(first+last+".txt", accId_pin);
+            readFile(first+last, accId_pin);
         }
     }
 
     @Override
     public void withrawAmount(float amount) {
         if (balance > 0 && (balance -= amount) < 0 ) {
-            System.out.println("Withdrew $");
             balance -= amount;
+            System.out.println("Withdrew $" + amount);
         }
         else {
             System.out.println("Insufficient funds.");
@@ -32,7 +32,7 @@ public class CheckingAccount extends File_ReadWrite implements AccountInterface 
     @Override
     public void depositAmount(float amount) {
         balance += amount;
-        System.out.println("Deposited $");
+        System.out.println("Deposited $" + amount);
     }
 
     @Override

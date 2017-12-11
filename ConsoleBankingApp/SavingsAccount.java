@@ -12,10 +12,10 @@ public class SavingsAccount extends File_ReadWrite implements AccountInterface {
     SavingsAccount (String first, String last, String accId_pin) {
 
         if (accId_pin.equals("none")) {
-            writeFile(first+last+".txt", "50000", "none");
+            writeFile(first+last, "50000", "none");
         }
         else {
-            readFile(first+last+".txt", accId_pin);
+            readFile(first+last, accId_pin);
         }
 
         // first check if all parameters are completed
@@ -39,7 +39,7 @@ public class SavingsAccount extends File_ReadWrite implements AccountInterface {
     @Override
     public void depositAmount(float amount) {
         balance += amount;
-        System.out.println("Deposited $"+amount);
+        System.out.println("Deposited $"+ amount);
     }
 
     @Override
