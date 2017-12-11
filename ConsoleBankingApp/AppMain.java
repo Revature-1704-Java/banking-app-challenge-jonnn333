@@ -38,7 +38,7 @@ public class AppMain {
         testCheck.testCheckingAccount();
 
         // user input
-        System.out.println("Welcome to THE Bank");
+        System.out.println("\nWelcome to THE Bank");
         System.out.println("Please tell us if you're an 'existing' memnber");
         System.out.println("Alternatively, if you'd like to open an account, type 'open' and 'Checking' or 'Savings' ");
 
